@@ -1,0 +1,756 @@
+/* ▪▪▪▪▪▪ ВСЯКОЕ РАЗНОЕ ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+:root {
+  --main_font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial;
+  --bs-body-font-family: var(--main_font) !important;
+  --icons-offset-x: 0rem;
+  --icons-offset-y: 0rem;
+  --car-card-border-radius: 0.375rem;
+  --card_photo_holder-max-height: 10rem;
+}
+@media only screen and (max-width: 575.98px) {
+  :root {
+    font-size: 24px;
+    --car-card-border-radius: 0.18rem;
+    --card_photo_holder-max-height: 6.67rem;
+  }
+}
+/* ▪▪▪▪▪▪▪ УБИРАЮ ПРОТИВНУЮ ОБВОДКУ КНОПОК при фокусе ▪▪▪▪▪▪▪*/
+button, .accordion-button:focus, .form-control:focus, *:focus[class^="btn"], *:active[class^="btn"] {
+  box-shadow: 0 0 0 0 !important;
+}
+.btn-check:active + .btn-outline-secondary:focus, .btn-check:checked + .btn-outline-secondary:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus, .btn-outline-secondary:active:focus, select:focus, .page-link:focus {
+  box-shadow: 0 0 0 0 !important;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪ корректирую стили бутстрапа ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ */
+.btn, span, a, p, div, label, button, h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto;
+}
+input {
+  /*font-family: "Segoe UI" !important;*/
+  /*font-family: "Roboto" !important;*/
+}
+.btn {
+  border-radius: 0.2rem;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪  HEADER над красным меню ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.car_sale_logo {
+  white-space: nowrap;
+  text-decoration: none;
+}
+.car_sale_logo span {
+  font-family: "Segoe UI" !important;
+  font-size: 2rem;
+}
+.car_sale_logo {
+  white-space: nowrap;
+  text-decoration: none;
+}
+.car_sale_logo_mobile span {
+  font-family: "Segoe UI" !important;
+  font-size: 2rem;
+}
+.i_header_logo {
+  position: relative;
+  width: 5rem;
+  height: 4rem;
+  margin-left: -0.5rem;
+}
+.i_header_logo div::before {
+  content: '\e984';
+  position: absolute;
+  top: 0.1rem;
+  color: var(--bs-red);
+  font-family: 'Brands_icons';
+  font-size: 3.5rem;
+}
+.header_menu_line_2 .nav-link:hover {
+  background-color: #000000;
+}
+.for_logged_user svg {
+  color: var(--bs-gray-600);
+}
+.for_logged_user span {
+  padding-left: 0.5rem;
+  color: var(--bs-gray-600);
+  white-space: nowrap;
+}
+@media only screen and (max-width: 575.98px) {
+  .for_logged_user svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .for_logged_user span {
+    display: block;
+    max-width: 60vw;
+    /*padding-top: 0.5rem;*/
+    /*padding-bottom: 0.5rem;*/
+    font-size: 1.2rem;
+    overflow-x: hidden;
+  }
+  .for_logged_user button {
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .i_header_logo {
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -0.5rem;
+  }
+  .i_header_logo div::before {
+    content: '\e984';
+    position: absolute;
+    top: 0.1rem;
+    color: var(--bs-red);
+    font-family: 'Brands_icons';
+    font-size: 2.8rem;
+  }
+  .navbar-toggler {
+    margin-right: 0.2rem;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .for_logged_user {
+    max-width: 12rem;
+  }
+  .for_logged_user span {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+  }
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪ МЕНЮ ИКОНОК БРЭНДОВ ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.brands_menu_logos {
+  padding-left: 0;
+}
+.brands_menu_item {
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+.brands_menu_item a {
+  display: inline-block;
+  margin-top: 0.8rem !important;
+}
+.brands_menu_item div[class^="i_"] {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  color: var(--bs-gray-600);
+  text-align: center;
+  font-family: 'Brands_icons';
+  font-size: 2.5rem;
+}
+brands_menu_item div:nth-of-type(2) {
+  text-align: center;
+  white-space: normal;
+  font-size: 1rem;
+}
+.brands_menu_item > a {
+  color: var(--bs-gray-600);
+  text-decoration: none;
+}
+.brands_menu_item > a:hover, .brands_menu_item > a:hover > div {
+  color: var(--bs-red);
+  text-decoration: none;
+}
+/* ГОРИЗОНТАЛЬНАЯ ПРОКРУТКА ДЛЯ МЕНЮ */
+.nav_scroller {
+  position: relative;
+  z-index: 2;
+}
+.nav_scroller ul {
+  display: flex;
+  margin-top: -1px;
+  padding-bottom: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+@media only screen and (max-width: 575.98px) {
+  .nav_scroller ul {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+/* ▪▪▪▪▪▪ ROW-COLS для меню иконок брэндов ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.row-cols-8 {
+  width: 12.5%;
+}
+.row-cols-10 {
+  width: 10%;
+}
+.row-cols-12 > li {
+  min-width: 4.875rem;
+  max-width: 8.1%;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ ИКОНКИ БРЭНДОВ ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: Brands_icons;
+  src: url("../font/logo_brands_filtered.woff2") format("woff2"),
+  url("../font/logo_brands_filtered.woff") format("woff"), /* это фактически не нужно вообще, оставил как пример */ url("../font/logo_brands.ttf") format("truetype");                  /* это фактически не нужно вообще, оставил как пример */
+}
+.i_audi::before {
+  content: '\ea05';
+}
+.i_bmw::before {
+  content: '\e900';
+}
+.i_cadillac::before {
+  content: '\e9eb';
+}
+.i_cherry::before {
+  content: '\e9e3';
+}
+.i_chevrolet::before {
+  content: '\e9e2';
+  margin-left: auto;
+  margin-right: auto;
+}
+.i_chrysler::before {
+  content: '\e9da';
+}
+.i_dodge::before {
+  content: '\e9d2';
+}
+.i_fiat::before {
+  content: '\e9c0';
+}
+.i_ford::before {
+  content: '\e9be';
+}
+.i_honda::before {
+  content: '\e9aa';
+}
+.i_hyundai::before {
+  content: '\e9a0';
+}
+.i_kia::before {
+  content: '\e98c';
+}
+.i_mazda::before {
+  content: '\e966';
+}
+.i_mercedes::before {
+  content: '\e962';
+}
+.i_mitsubishi::before {
+  content: '\e95c';
+}
+.i_nissan::before {
+  content: '\e952';
+}
+.i_opel::before {
+  content: '\e94f';
+}
+.i_peugeot::before {
+  content: '\e948';
+}
+.i_renault::before {
+  content: '\e93d';
+}
+.i_skoda::before {
+  content: '\e929';
+}
+.i_suzuki::before {
+  content: '\e922';
+}
+.i_toyota::before {
+  content: '\e91c';
+}
+.i_volkswagen::before {
+  content: '\e90d';
+}
+.i_jeep::before {
+  content: '\e995';
+}
+.i_landrover::before {
+  content: '\e97a';
+}
+.i_citroen::before {
+  content: '\e9df';
+}
+.i_seat::before {
+  content: '\e92f';
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.content {
+  color: var(--bs-gray-700);
+  background-color: var(--bs-white);
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪▪▪ КАРТОЧКА МАШИНЫ ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.car_card {
+  position: relative;
+  height: 100%;
+  min-height: 14rem;
+  border-radius: var(--car-card-border-radius);
+  overflow: hidden;
+}
+.car_card a {
+  text-decoration: none;
+}
+.car_card .card_photo_holder {
+  display: flex;
+  align-items: center;
+  max-height: var(--card_photo_holder-max-height);
+  border-top-left-radius: var(--car-card-border-radius);
+  border-top-right-radius: var(--car-card-border-radius);
+  overflow: hidden;
+}
+.car_card .card_photo_holder img {
+  border-top-left-radius: var(--car-card-border-radius);
+  border-top-right-radius: var(--car-card-border-radius);
+}
+.car_card .card_no_photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  color: #000000;;
+  background-color: #EAEAEA;
+}
+.car_card .car_name {
+  margin-bottom: 0.25rem;
+  color: #000000;
+  font-size: 1.1rem;
+  overflow: hidden;
+}
+.car_card .car_price {
+  margin: 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+  font-weight: bold;
+}
+.car_card .car_parameters {
+  padding-top: 0.3rem;
+  color: var(--bs-gray-500);
+  font-size: 0.9rem;
+}
+.car_card .card-body {
+  position: relative;
+  padding: 0.9rem 1rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .car_card .car_price {
+    margin-bottom: 0.1rem;
+  }
+  .car_card .car_parameters {
+    padding-top: 0.25rem;
+  }
+  .car_card .card-body {
+    padding: 0.6rem;
+  }
+}
+.extended_car_card {
+  position: absolute;
+  height: auto;
+  border: 1px solid #858585;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.ext_car_card_photo {
+  min-height: 60% !important;
+  max-height: 60% !important;
+}
+.ext_car_card_microphoto_set img {
+  width: 18%;
+  min-height: 1.6rem;
+  max-height: 1.7rem;
+  overflow: hidden;
+}
+.ext_card_empty_img {
+  width: 18%;
+  min-height: 1.6rem;
+  background-color: #CBCBCB;
+}
+.ext_card_footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.phone_card_photo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪ КРАСНОЕ МЕНЮ  в шапке ▪▪▪▪▪▪▪*/
+.main_menu_red {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background-color: var(--bs-danger);
+}
+.main_menu_red .nav {
+  line-height: 2.5;
+}
+.main_menu_red .nav-link {
+  color: #FFFFFF !important;
+  font-family: Roboto;
+  font-size: 1.05rem;
+}
+.main_menu_red .nav-link:hover {
+  background-color: #000000 !important;
+}
+.main_menu_red li:active {
+  background-color: #2866BC !important;
+}
+.mobile_navbar .main_menu_red .nav-link {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+/* ▪▪▪▪▪▪▪▪▪▪ СИРЕНЕВОЕ МЕНЮ  в подвале ▪▪▪▪▪▪▪*/
+.main_menu_footer {
+  background-color: var(--bs-indigo);
+  border-bottom: 0 !important;
+}
+.main_menu_footer .nav-link {
+  line-height: 2.2;
+  padding-top: 0.18rem;
+  padding-bottom: 0;
+  color: #FFFFFF !important;
+  vertical-align: center !important;
+}
+.main_menu_footer .nav-link:hover {
+  background-color: #000000 !important;
+}
+.main_menu_footer li:active {
+  background-color: #2866BC !important;
+}
+.mobile_navbar .main_menu_footer .nav-link {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .main_menu_footer .nav-link {
+    line-height: 1.5 !important;
+    padding-top: 0 !important;
+  }
+  .main_menu_footer .nav {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪ PAGINATOR ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.paginator_container .pagination {
+  justify-content: end;
+}
+.paginator_container .page-link {
+  color: #6C757D;
+  background-color: #FFFFFF;
+}
+.page-item.active .page-link {
+  color: #FFFFFF;
+  background-color: #6C757D;
+  border-color: #6C757D;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.data_form .col-12 {
+  margin-top: 0.5rem;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪ ПОИСК ВВЕРХУ ▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.search_wrapper {
+  position: relative;
+}
+.black_rect_fullscreen {
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  transition-duration: 200ms;
+  transition-property: opacity;
+  z-index: 50 !important;
+}
+.logo_block {
+  position: relative;
+  background-color: #F8F9FA;
+  z-index: 100 !important;
+}
+.logo_block_mobile {
+  position: relative;
+  background-color: #F8F9FA;
+  z-index: 100 !important;
+}
+#search_mobile {
+  border-left: 0px;
+  border-radius: 0;
+}
+.dynamic_search_results, .dynamic_search_results_mobile {
+  position: absolute;
+  top: 2rem;
+  background-color: #FFFFFF;
+  border: 1px solid #AAAAAA;
+  border-radius: 0.25rem !important;
+  z-index: 500;
+}
+.dynamic_search_results ul, .dynamic_search_results_mobile ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  text-decoration: none;
+}
+.dynamic_search_results li, .dynamic_search_results_mobile li {
+  list-style-type: none;
+}
+.dynamic_search_results_mobile {
+  max-width: 100vw;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #000000;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+.dynamic_search_results_mobile .dynamic_search_list_item a {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+.dynamic_search_list_item a {
+  display: block;
+  line-height: 1.5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #777777;
+  background-color: #FFFFFF;
+  white-space: pre;
+  white-space: pre;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 1rem;
+}
+.dynamic_search_list_item a:hover {
+  color: #FFFFFF;
+  background: #444444;
+}
+.additional_message_below {
+  margin-top: 0.3rem;
+  /*border-top: 1px solid #CCCCCC;*/
+  /*color: #000000 !important;*/
+  text-align: end;
+  font-style: italic;
+}
+.additional_message_below:hover {
+  color: #000000 !important;
+  background-color: #E1E1E1 !important;
+  cursor: pointer;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ SWITCH_LANGUAGE ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.switch_language_wrapper {
+  display: flex;
+  text-align: center;
+}
+.current_lang_div span:nth-of-type(2) {
+  padding-left: 0.3rem;
+  color: #E8E690;
+}
+.current_lang_div {
+  line-height: 1.5;
+  padding: 0rem 1rem 0rem 1rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 0.9rem;
+}
+.another_lang_div {
+  line-height: 1.5;
+  padding: 0rem;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.another_lang_div a {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: #FFE4AF;
+}
+.another_lang_div a:hover {
+  color: #FFFFFF;
+  background-color: #0B5ED7;
+}
+.select_lang {
+  padding-bottom: 0rem;
+  padding-bottom: 0rem;
+}
+.pagination .page-link {
+  color: #6C757D;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪  блок сортировки и количества элементов на странице  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.sorting_and_per_page {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem -0.25rem 0rem -0.25rem;
+  padding: 0.2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.sorting_and_per_page > div { /*  sorting div  */
+  margin: 0;
+}
+.sorting_and_per_page label {
+  line-height: 1;
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+}
+.sorting_and_per_page select {
+  display: inline !important;
+  width: auto;
+  line-height: 1.5;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sorting_and_per_page option {
+  min-height: 2.5rem !important;
+  padding: 1rem 1rem;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪  FAVORITES & COMPARE  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.car_card_icons {
+  display: block;
+  position: absolute;
+  color: #B2B2B2;
+  cursor: pointer;
+}
+.icon_compare {
+  bottom: calc(1.75rem + var(--icons-offset-y));
+  right: calc(0.3rem + var(--icons-offset-x));
+}
+.icon_compare:hover {
+  bottom: calc(1.75rem + var(--icons-offset-y));
+  right: calc(0.3rem + var(--icons-offset-x));
+  color: #F22AC5;
+}
+.icon_favorite {
+  bottom: calc(0.3rem + var(--icons-offset-y));
+  right: calc(0.3rem + var(--icons-offset-x));
+}
+.icon_favorite:hover {
+  bottom: calc(0.3rem + var(--icons-offset-y));
+  right: calc(0.3rem + var(--icons-offset-x));
+  color: #F22AC5;
+}
+.ext_card_icons {
+  --icons-offset-x: 0.6rem;
+  --icons-offset-y: 0.85rem;
+}
+.car_card_icons input {
+  display: none !important;
+}
+.car_card_icons input ~ .icons > svg:nth-of-type(1) {
+  display: inline !important;
+}
+.car_card_icons input ~ .icons > svg:nth-of-type(2) {
+  display: none !important;
+}
+.car_card_icons input:checked ~ .icons > svg:nth-of-type(1) {
+  display: none !important;
+}
+.car_card_icons input:checked ~ .icons > svg:nth-of-type(2) {
+  display: inline !important;
+}
+.showing_to_of_text {
+  line-height: 2;
+}
+#clear_favorites {
+  line-height: 1.0 !important;
+  padding: 0.4rem 0.75rem 0.25rem 0.75rem !important;
+  color: #209A22;
+  border: 1px solid #209A22;
+  vertical-align: middle;
+}
+#clear_favorites:hover {
+  color: #FFFFFF;
+  background-color: #209A22;
+}
+#clear_compare {
+  line-height: 1.0 !important;
+  padding: 0.4rem 0.75rem 0.25rem 0.75rem !important;
+  color: #207E9A;
+  border: 1px solid #207E9A;
+  vertical-align: middle;
+}
+#clear_compare:hover {
+  color: #FFFFFF;
+  background-color: #207E9A;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ for PHONE ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+@media only screen and (max-width: 575.98px) {
+  .navbar {
+    padding-top: 0;
+  }
+  .sorting_and_per_page {
+    margin-left: -0.2rem !important;
+    margin-right: -0.2rem !important;
+    padding-top: 0.3rem;
+    padding-left: 0.15rem !important;
+    padding-right: 0.15rem !important;
+    padding-bottom: 0.3rem;
+  }
+  .sorting_and_per_page > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sorting_and_per_page > div:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+  .sorting_and_per_page > div > label {
+    line-height: 1.5;
+  }
+  #clear_favorites {
+    font-size: 0.8rem;
+  }
+  .car_card {
+    min-height: 0;
+  }
+  .pagination .page-link {
+    line-height: 1;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.9rem;
+  }
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪  FORUM  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+@media only screen and (max-width: 575.98px) {
+  .forum {
+    line-height: 2;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .forum {
+    line-height: 2;
+    padding: 12rem 5rem;
+    text-align: center;
+  }
+}
+/* ······························································ */
+#loader_black_rect_fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition-duration: 200ms;
+  transition-property: opacity;
+  z-index: 1000 !important;
+}

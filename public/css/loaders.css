@@ -1,0 +1,154 @@
+/* ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ loader_1 ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ */
+/*  <span class="loader_1">Load&nbsp;ng</span>  */
+.loader_1 {
+  position: relative;
+  width: 164px;
+  height: 164px;
+}
+.loader_1::before, .loader_1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  animation: rotate_1 1s ease-in infinite;
+}
+.loader_1::after {
+  width: 20px;
+  height: 20px;
+  background-color: #FF3D00;
+  animation: rotate_1 1s ease-in infinite, moveY 1s ease-in infinite;
+}
+@keyframes moveY {
+  0%, 100% {
+    top: 10%
+  }
+  45%, 55% {
+    top: 59%
+  }
+  60% {
+    top: 40%
+  }
+}
+@keyframes rotate_1 {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg) scale(1, 1)
+  }
+  25% {
+    transform: translate(-50%, 0%) rotate(180deg) scale(1, 1)
+  }
+  45%, 55% {
+    transform: translate(-50%, 100%) rotate(180deg) scale(3, 0.5)
+  }
+  60% {
+    transform: translate(-50%, 100%) rotate(180deg) scale(1, 1)
+  }
+  75% {
+    transform: translate(-50%, 0%) rotate(270deg) scale(1, 1)
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg) scale(1, 1)
+  }
+}
+/* ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ loader_2 ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ */
+/*  <span class="loader_2">Load&nbsp;ng</span>  */
+.loader_2 {
+  position: relative;
+  width: 50px;
+  height: 165px;
+}
+.loader_2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: #FF3D00;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: bounce 2s linear infinite;
+}
+.loader_2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  background: #FFFFFF;
+  border-radius: 4px;
+  animation: rotate_2 2s linear infinite;
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    transform: translate(-50%, 0px);
+    height: 20px;
+  }
+  20% {
+    transform: translate(-25%, 85px);
+    height: 28px;
+  }
+  25% {
+    transform: translate(-25%, 110px);
+    height: 12px;
+  }
+  70% {
+    transform: translate(-75%, 85px);
+    height: 28px;
+  }
+  75% {
+    transform: translate(-75%, 108px);
+    height: 12px;
+  }
+}
+@keyframes rotate_2 {
+  0%, 50%, 100% {
+    transform: rotate(0deg)
+  }
+  25% {
+    transform: rotate(90deg)
+  }
+  75% {
+    transform: rotate(-90deg)
+  }
+}
+/* ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ loader_3 ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ */
+/*  <span class="loader_3">Load&nbsp;ng</span>  */
+.loader_3 {
+  position: relative;
+  border: 24px solid;
+  border-color: #fff  transparent #fff transparent;
+  animation : rotate_3 2s linear infinite;
+}
+.loader_3:before,
+.loader_3:after {
+  content:"";
+  display: block;
+  border: 24px solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  left: -24px;
+  top: -24px;
+  animation: mvx 1s infinite linear;
+}
+.loader_3:before {
+  border-color: transparent #fff transparent transparent;
+  animation-name:mvrx;
+  animation-delay: 0.5s;
+}
+@keyframes rotate_3 {
+  100% {transform: rotate(360deg)}
+}
+@keyframes mvx {
+  20% , 80% {transform: translateX(0)}
+  50% {transform: translateX(-50%)}
+}
+@keyframes mvrx {
+  20% , 80% {transform: translateX(0)}
+  50% {transform: translateX(50%)}
+}

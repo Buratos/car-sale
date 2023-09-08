@@ -1,0 +1,187 @@
+.content_global_wrapper, .content {
+  background-color: #F4F6F9 !important;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ карточка с характеристиками  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+.card_create_car {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  overflow: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+  --bs-card-border-radius: 0.23rem;
+}
+.card_create_car .card-body {
+  border-left: 1px solid rgba(0, 0, 0, 0.176);
+  border-right: 1px solid rgba(0, 0, 0, 0.176);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.176);
+  border-bottom-right-radius: var(--bs-card-border-radius);
+  border-bottom-left-radius: var(--bs-card-border-radius);
+}
+.card_create_car .card-header {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 0;
+  border-top-left-radius: var(--bs-card-border-radius);
+  border-top-right-radius: var(--bs-card-border-radius);
+}
+.card-success .card-header {
+  color: #FFFFFF;
+  background-color: #28A745;
+}
+.card-danger .card-header {
+  color: #FFFFFF;
+  background-color: #DC3545;
+  border: 1px solid #DC3545;
+}
+.card-warning .card-header {
+  color: #000000;
+  background-color: #FFC107;
+  border: 1px solid #FFC107;
+}
+.card-primary .card-header {
+  color: #FFFFFF;
+  background-color: #007BFF;
+  border: 1px solid #007BFF;
+}
+.card .card-title {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+/* FORM-GROUP ********************/
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  padding-left: 0.1rem;
+  padding-bottom: 0.3rem;
+  font-weight: bolder;
+}
+.form-group select, .form-group input {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+/* BTNs   SEND   CLEAR_DATA  ********************/
+@media only screen and (max-width: 575.98px) {
+  /*   PHONE   */
+  .btn_send_data, .btn_clear_data {
+    min-width: 6rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  /*   NO PHONE   */
+  .btn_send_data, .btn_clear_data {
+    min-width: 7rem;
+  }
+}
+.btn_send_data, .btn_clear_data {
+  padding-top: 0.15rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  padding-bottom: 0.15rem;
+  background-color: white;
+  font-size: 0.9rem;
+}
+.btn_send_data:hover {
+  background-color: #000000;
+}
+.btn_clear_data:hover {
+  background-color: #DC3545;
+}
+/*   <x-color-selection>   ********************/
+.x_color_selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  text-align: center;
+}
+.x_color_selection_title {
+  flex: 0 1 100%;
+}
+.btn_color_radio {
+  flex: 1 0 auto;
+  margin: 0.15rem 0.2rem !important;
+}
+.btn_color_radio > input {
+  display: none;
+}
+input.color_radio:checked ~ .btn_checkbox_text {
+  color: #FFFFFF;
+  background-color: #D63384;
+  border: 1px solid #D63384;
+}
+@media only screen and (max-width: 575.98px) {
+  .btn_color_radio {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪  ERROR MMESSAGE  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+#error_photos {
+  margin-top: 0.5rem !important;
+}
+@media only screen and (max-width: 575.98px) {
+  /*   PHONE   */
+  .error_message {
+    /*display: flex;*/
+    color: #FFFFFF;
+    background-color: #343434;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .error_message svg {
+    display: block;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FF6541;
+  }
+  .error_message span {
+    display: block;
+    text-align: center;
+    line-height: 1.2 !important;
+    vertical-align: middle;
+  }
+}
+@media only screen and (min-width: 576px) {
+  /*   COMPUTER   */
+  .error_message {
+    display: flex;
+    color: #FFFFFF;
+    border-radius: 5px;
+    background-color: #343434;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .error_message svg {
+    margin-right: 1rem;
+    align-self: center;
+    flex: 0 0 auto;
+    color: #FF6541;
+  }
+  .error_message span {
+    /*display: inline-flex !important;*/
+    overflow: hidden;
+    flex-grow: 1;
+    line-height: 1.5;
+    padding-top: 0.2rem;
+    text-align: center;
+  }
+}
+label.is-invalid {
+  color: #C40B2C;
+}
+label.is-invalid + hr {
+  color: #C40B2C !important;
+  background-color: green !important;
+  border-color: #C40B2C !important;
+  /*border: 1px solid #000000;*/
+}

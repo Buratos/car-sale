@@ -1,0 +1,2 @@
+<?php $totalProductsFound = $laptops->total(); ?>
+<x-filters_section isAnyFiltersSelected="{{$isAnyFiltersSelected}}" :pluralWords="$pluralWords" totalProductsFound="{{$totalProductsFound}}" :filters="$filters" />

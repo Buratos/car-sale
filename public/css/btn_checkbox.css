@@ -1,0 +1,97 @@
+label.btn_checkbox {
+  display: inline-block;
+  margin: 0.35rem 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  user-select: none;
+}
+.btn_checkbox_filter > input {
+  display: none;
+}
+.btn_checkbox_text {
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.2rem 0.7rem;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #AAAAAA;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition-duration: 200ms;
+  transition-property: right;
+}
+.btn_checkbox_text:hover {
+  background-color: #D63384;
+  border: 1px solid #D63384;
+}
+.btn_checkbox_text > span:nth-of-type(2) {
+  padding-left: 0.4em;
+  color: #777777;
+  font-size: 0.8em;
+}
+@media only screen and (max-width: 575.98px) {
+  .btn_checkbox_text:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA;
+  }
+  input:checked ~ .btn_checkbox_text:hover {
+    color: #000000;
+    background-color: #FAFDD6;
+    border: 1px solid #AAAAAA;
+  }
+  .btn_checkbox_text {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .btn_checkbox_filter {
+    margin: 0.25rem 0.25rem !important;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .w_sm_auto {
+    width: auto !important;
+  }
+  .btn_checkbox_text:hover > span {
+    color: #FFFFFF;
+  }
+  input:checked ~ .btn_checkbox_text:hover > span {
+    color: #FFFFFF;
+  }
+}
+input:checked ~ .btn_checkbox_text {
+  background-color: #FAFDD6;
+}
+input:checked ~ .btn_checkbox_text:hover {
+  color: #FFFFFF;
+  background-color: #D63384;
+  border: 1px solid #D63384;
+}
+input:checked ~ .btn_checkbox_text > span:nth-of-type(2) {
+  display: none;
+}
+.filter_color {
+  display: inline-block;
+  width: 1rem !important;
+  height: 1rem !important;
+  margin-top: -0.1rem;
+  margin-left: -0.3rem;
+  margin-right: 0.4rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.filter_color_white {
+  display: inline-block;
+  width: 1rem !important;
+  height: 1rem !important;
+  margin-top: -0.2rem;
+  margin-left: -0.3rem;
+  margin-right: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  vertical-align: middle;
+}

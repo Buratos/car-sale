@@ -1,0 +1,91 @@
+#view_car_table {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid #D8D8D8 !important;
+}
+#view_car_table thead {
+  height: 0.5rem;
+}
+#view_car_table tbody tr {
+  line-height: 1.5;
+}
+#view_car_table tbody tr:hover {
+  line-height: 1.5;
+  background-color: #EBF7FF !important;
+}
+#view_car_table tbody td {
+  padding: 0rem 0.5rem;
+}
+#view_car_table tbody tr:nth-of-type(even) {
+  background-color: #F7F7F7;
+}
+#view_car_table tbody tr:last-of-type {
+  font-weight: bolder;
+}
+.car_description {
+  margin-bottom: 0.7rem;
+  background-color: #F7F7F7;
+}
+.car_description h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.car_description p {
+  line-height: 1.1;
+  padding-bottom: 0.6rem;
+  text-align: justify;
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+#btn_edit_car, #btn_delete_car, #btn_add_to_compare, #btn_add_to_favorites {
+  min-width: 6.5rem !important;
+  margin-left: 0.3rem !important;
+  margin-right: 0.3rem !important;
+  margin-bottom: 1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+@media only screen and (max-width: 575.98px) {
+  /* MOBILE                                                       */
+  .content {
+    padding-top: 0.5rem !important;
+    /*padding-bottom: 1rem !important;*/
+  }
+  .photos_slider {
+    padding-bottom: 1rem !important
+  }
+  .breadcrumb {
+    justify-content: flex-start !important;
+    margin-bottom: 0.7rem;
+    white-space: nowrap;
+    font-size: 1rem;
+    --bs-breadcrumb-item-padding-x: 0.3rem;
+    /*overflow-x: hidden;*/
+  }
+  .breadcrumb .breadcrumb-item {
+    font-size: 1.0rem !important;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding-right: var(--bs-breadcrumb-item-padding-x);
+    color: var(--bs-breadcrumb-divider-color);
+    float: left;
+  }
+}
+@media only screen and (min-width: 576px) {
+  /* DESKTOP                                                       */
+  .content {
+    padding: 1rem 1rem 0 1rem !important;
+  }
+  .photos_slider {
+    padding-bottom: 1rem !important
+  }
+  .car_info {
+    /*padding-bottom: 1rem !important*/
+  }
+}
+.breadcrumb .breadcrumb-item, .breadcrumb .breadcrumb-item a {
+  height: 1rem;
+  line-height: 1.2rem !important;
+  vertical-align: top;
+}

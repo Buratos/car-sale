@@ -1,0 +1,2 @@
+<?php $totalProductsFound = $ssds->total(); ?>
+<x-filters_section isAnyFiltersSelected="{{$isAnyFiltersSelected}}" :pluralWords="$pluralWords" totalProductsFound="{{$totalProductsFound}}" :filters="$filters" />

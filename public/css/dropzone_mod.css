@@ -1,0 +1,141 @@
+:root {
+ --dz-image-width: 120px;
+}
+
+.dropzone .dz-preview .dz-image {
+  width: var(--dz-image-width);
+}
+
+.dropzone {
+  margin: -1rem;
+  background-color: rgb(246, 246, 246, 0.0);
+  border: 0;
+  /*border: 1px solid #CCDEEE;*/
+  border-top: 0;
+  text-align: center;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+@media only screen and (max-width: 575.98px) {
+  .dropzone {
+    margin: -1.3rem;
+  }
+  .dropzone .dz-preview {
+    margin: 0.5rem;
+  }
+}
+.dz-default.dz-message {
+  margin: 0;
+}
+.dz-preview {
+  /*background: rgb(232, 232, 232) !important;*/
+  border-radius: 2px !important;
+  outline: 1px solid #B6B6B6;
+  overflow: hidden !important;
+}
+.dropzone .dz-preview .dz-image {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  height: 100px !important;
+  background-color: #F0F0F0;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+.dropzone .dz-preview .dz-image img {
+  margin-left: -0.5rem !important;
+  margin-right: -0.5rem !important;
+  /*overflow-wrap: initial;*/
+}
+.dz-preview:hover {
+  /*background-color: #000000 !important;*/
+}
+.dz-preview:hover img {
+  transform: none !important;
+  filter: unset !important;
+}
+.dz-details .dz-filename span, .dz-details .dz-size span {
+  padding: 0 0.4em;
+  background-color: rgba(255, 255, 255, .8) !important;
+  border-radius: 3px;
+}
+.dz-success-mark {
+  display: none !important;
+}
+.dz-details {
+  opacity: 1 !important;
+  position: relative;
+  height: 100%;
+}
+.dz-details .dz-size {
+  display: none;
+}
+.dz-details .dz-filename span[data-dz-name] {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+.dz-details .dz-filename {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0F0F0;
+}
+.dz-remove, .btn-remove-old-photo {
+  position: absolute;
+  top: 0rem;
+  right: -0.1rem;
+  width: 1.3rem;
+  height: 1.1rem;
+  color: rgba(225, 138, 138, 0.50);
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom-left-radius: 3px;
+  cursor: default !important;
+  font-size: 1rem !important;
+  transition-duration: 250ms;
+  transition-property: color, background-color;
+  z-index: 100;
+}
+.dz-remove:hover, .btn-remove-old-photo:hover {
+  color: #FFFFFF;
+  background-color: #2AA846;
+}
+.dropzone .dz-preview.dz-complete .dz-progress {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+.dropzone .dz-preview .dz-progress .dz-upload {
+  transition: width 200ms ease-in-out;
+}
+/* ▪▪▪▪▪▪▪▪▪ MY ELEMENTS ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+@media only screen and (max-width: 575.98px) {
+  /*   PHONE   */
+  .btn_send_data, .btn_clear_data {
+    min-width: 6rem;
+  }
+  .drag_drop_big_icon {
+    display: none;
+  }
+  .dz-button { /* text   "Drop files here to upload"          */
+    margin: 2rem 0 2rem 0 !important;
+    color: #6288C2 !important;
+    font-family: Roboto !important;
+  }
+}
+@media only screen and (min-width: 576px) {
+  /*   NO PHONE   */
+  .drag_drop_big_icon {
+    margin-top: 0.4rem;
+  }
+  .drag_drop_big_icon svg {
+    color: #BBCFF1;
+  }
+  .dz-button { /* text   "Drop files here to upload"          */
+    line-height: 44px !important;
+    margin: 0 0 -0.4rem 0 !important;
+    color: #6288C2 !important;
+    font-family: Roboto !important;
+  }
+}
+/* ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
+/* ▪▪▪▪▪▪▪▪▪▪  ТО ЧТО НИЖЕ  это для EDIT CAR  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪*/
